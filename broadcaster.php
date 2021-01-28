@@ -1,14 +1,15 @@
 <?php
 /*
 *
-* PayPal Octa IPN
-* IPN broadcaster for PayPal to support up to eight different IPN hosts.
+* PayPal IPN Multi WHMCS
+* IPN broadcaster for PayPal to support multiple WHMCS installs.
 *
 * Version: 1.0.0.0
 * Release: 25-10-2016
-* Authors: Qarizma & Codeseekah
+* Authors: Knewedge, Qarizma, and Codeseekah
 * License: MIT License
-* Website: https://github.com/qarizma/paypal-octa-ipn
+* Website: https://github.com/knewedge/paypal-ipn-multi-whmcs
+* Fork of: https://github.com/qarizma/paypal-octa-ipn
 *
 */
 
