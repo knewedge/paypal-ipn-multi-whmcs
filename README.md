@@ -45,7 +45,6 @@ ipn_track_id => 0
 
 ### Installation
 Adjust the IPNs in the script with your business names and IPN endpoints.
-If you are using WHMCS please check the steps below to make it work.
 
 ### Credits
 * Codeseekah for the original code (http://codeseekah.com).
