@@ -25,15 +25,15 @@ $urls = array();
 
 // List of IPNs. Add here your different businesses.
 $ipns = array(
-	'shop1' => 'https://www.qarizm.com/whmcs',
-	'shop2' => 'http://www.anotherone.com/ipntest.php',
-	'shop3' => 'http://www.anotheryolo.com/paypal.php'
+	'whmcs1' => 'https://www.business1.com/billing/',
+	'whmcs2' => 'https://www.business2.com/billing/',
+	'whmcs3' => 'https://www.business3.com/billing/'
 );
 
-// Here we match the email with IPN. You can also use other variables from the notification.log in $_POST.
-if ($_POST['business'] == 'shop1k@mypaypal.com') $urls[] = $ipns['shop1'];
-if ($_POST['business'] == 'shop2@mypaypal.com') $urls[] = $ipns['shop2'];
-if ($_POST['business'] == 'shop3@mypaypal.com') $urls[] = $ipns['shop3'];
+// Here we match the business name that WHMCS prepends to the item_name with IPN. You can also use other variables from the notification.log in $_POST.
+if (stripos($_POST['item_name'],'business-name1') !== FALSE) $urls[] = $ipns['whmcs1'];
+if (stripos($_POST['item_name'],'business-name2') !== FALSE) $urls[] = $ipns['whmcs2'];
+if (stripos($_POST['item_name'],'business-name3') !== FALSE) $urls[] = $ipns['whmcs3'];
 
 // If nothing has match, broadcast them all.
 if (!sizeof($urls)) $urls = $ipns;
